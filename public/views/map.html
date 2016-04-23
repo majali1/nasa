@@ -1,0 +1,60 @@
+<div id="cf">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-sm-10">
+                <div id="mapwrap">
+                    <div class="claro">
+                        <div id="mapdiv">
+                            <div id="HomeButton">
+                                <div class="fa fa-home fa-2x" ng-click="GoHome()"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--col-lg-8-->
+            <div class="col-lg-2 col-sm-2">
+
+                <form role="form " ng-submit="GetDiseaseDataByCountry()" style="margin-top: 50px;">
+                    <div class="dropdown" style="margin-bottom: 20px">
+                        <select class="form-control" ng-model="selectedCountry" ng-change="ZoomToCountry()"
+                                ng-options="country as country.CountryName for country in countries">
+                            <option value="" selected="selected">Select Country</option>
+                        </select>
+                    </div>
+
+                    <div class="dropdown" style="margin-bottom: 20px">
+                        <select class="form-control" ng-model="selectedDisease"
+                                ng-options="diseaseObj as diseaseObj for diseaseObj in diseases">
+                            <option value="" selected="selected">Select Disease</option>
+                        </select>
+                    </div>
+                    <input type="submit" class="btn btn-primary"/>
+                </form>
+
+            </div><!--col-lg-4-->
+
+        </div><!-- row -->
+        <div class="row">
+            <div class="col-md-4">
+                <h4 style="color:white">Rate</h4>
+                <ul>
+                    <li style="color:#FF0600" class="fa fa-square">
+
+                    </li>
+                    <li style="color:#FF3601" class="fa fa-square">
+
+                    </li>
+                    <li style="color:#FF8002" class="fa fa-square">
+
+                    </li>
+                    <li style="color:#FFC904" class="fa fa-square">
+
+                    </li>
+                    <li style="color:#FFFA05" class="fa fa-square">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- container -->
+</div><!-- Contact Footer -->
